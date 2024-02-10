@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script src="js/ajax.js" defer></script>
+        <link rel="stylesheet" href="css/cssExamples.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="show_keepers"></div>
+        <button id="show_price_order" onclick="show_price_order()">Show order of price</button>
+        <button id="show_distance_order" onclick="show_distance_order('distance')">Show in order of distance</button>
+        <button id="show_time_order" onclick="show_distance_order('duration')">Show in order of time to go with the car</button>
+        <div id="order_output"></div>
+        <div id="keeper_select_result"></div>
+        <button type="button" onclick="Go_homepage()">Back</button>
+
+        <div>
+            <label for="startDate">From Date:</label>
+            <input type="date" id="startDate" name="startDate">
+
+            <label for="endDate">Until Date:</label>
+            <input type="date" id="endDate" name="endDate">
+        </div>
+        <div>
+            <button id="owner_booking_output" onclick="OwnerBooking()">Book</button>
+            <button id="finished" onclick="finished()">Finished</button>
+        </div>
+        <div id="owner_booking_result"></div>
+
+        <label for="message_to_keeper">
+            Message to keeper:<br>
+        </label><input style="height:100px; width:400px;" id="message_to_keeper" type="text" placeholder=""><br>
+        <button id="send_message_to_keeper" onclick="sendMessage_to_keeper()">Send Message</button>
+        <div id="message_to_keeper_result"></div>
+
+        <div>
+            <label for="review_input">Review:</label><br>
+            <input style="height:100px; width:400px;" id="review_input" type="text" placeholder=""><br>
+            <label for="rating_input">Rating:</label><br>
+            <select id="rating_input">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button id="sendReview" onclick="sendReview()">Send Review</button>
+        </div>
+    </body>
+</html>

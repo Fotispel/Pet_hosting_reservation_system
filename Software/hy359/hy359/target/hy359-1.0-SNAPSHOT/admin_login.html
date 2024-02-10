@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administrator login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/ajax.js" defer></script>
+    <link rel="stylesheet" href="css/cssExamples.css">
+</head>
+<body>
+<div>Login</div>
+<br>
+<form id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+    <label for="username_admin">username:</label><br>
+    <input type="text" id="username_admin" name="username_admin" required><br>
+    <label for="password_admin">password:</label><br>
+    <input type="password" name="password_admin" id="password_admin" required><br>
+    <input type="submit" class="button" onclick="connect_admin()" value="Login">
+    <input type="submit" class="button" onclick="show_charts()" value="Show Charts">
+    <button type="button" onclick="Go_homepage()">Back</button>
+    <div id="result_admin"></div>
+    <div id="admin_output"></div>
+    <div id="chart_cats_dogs"></div>
+    <div id="chart_earnings"></div>
+    <div id="chart_owners_keepers"></div>
+</form>
+
+    <div id="spinWheelContainer" style="display: none;">
+        <canvas id="spinWheel" width="500" height="500"></canvas>
+        <button id="spinButton">Spin!</button>
+    </div>
+
+
+    <script src="js/spin.js" defer></script>
+    
+</body>
+</html>

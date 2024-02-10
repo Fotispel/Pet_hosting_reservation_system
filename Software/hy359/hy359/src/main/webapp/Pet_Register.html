@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/ajax.js" defer></script>
+    <link rel="stylesheet" href="css/cssExamples.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<form action="javascript:void(0);" onsubmit="return validateFormData()" method="POST" class="form">
+    <div>
+        <button type="button" onclick="initDB()">Init</button>
+        <button type="button" onclick="Go_homepage()">Back</button>
+    </div>
+
+    <label for="pet_id">Pet ID:</label><br>
+    <input type="text" id="pet_id" name="pet_id" autocomplete="on"><br><br>
+
+    <label for="owner_id">Owner ID:</label><br>
+    <input type="text" id="owner_id" name="owner_id" autocomplete="on"><br><br>
+    <div id="id_message"></div>
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" autocomplete="on"><br><br>
+
+    <label for="type">Type:</label><br>
+    <input type="text" id="type" name="type" autocomplete="on"><br><br>
+
+    <label for="breed">Breed:</label><br>
+    <input type="text" id="breed" name="breed" autocomplete="on"><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <input type="text" id="gender" name="gender" autocomplete="on"><br><br>
+
+    <label for="birthyear">Birth Year:</label><br>
+    <input type="text" id="birthyear" name="birthyear" autocomplete="on"><br><br>
+
+    <label for="weight">Weight:</label><br>
+    <input type="text" id="weight" name="weight" autocomplete="on"><br><br>
+
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" name="description" autocomplete="on"><br><br>
+
+    <label for="photo">Photo:</label><br>
+    <input type="text" id="photo" name="photo" autocomplete="on"><br>
+
+    <button type="submit" onclick="post_function()">POST</button>
+    <div id="message"></div>
+</form>
+
+<br><br>
+
+<form action="" method="POST" class="form">
+    <label for="type">Type:</label><br>
+    <input type="text" id="type_get" name="type" autocomplete="on"><br><br>
+
+    <label for="breed">Breed:</label><br>
+    <input type="text" id="breed_get" name="breed" autocomplete="on"><br><br>
+
+    <button type="button" onclick="get_function()">GET</button>
+    <br>
+    <div id="get_message"></div>
+</form>
+
+<br><br>
+
+<form action="" method="POST" class="form">
+    <label for="pet_id">Pet ID:</label><br>
+    <input type="text" id="pet_id_delete" name="pet_id" autocomplete="on"><br><br>
+
+    <button type="button" onclick="delete_function()">DELETE</button>
+    <br>
+    <div id="delete_message"></div>
+</form>
+
+<br><br>
+
+<form action="" method="POST" class="form">
+    <label for="pet_id">Pet ID:</label><br>
+    <input type="text" id="pet_id_put" name="pet_id" autocomplete="on"><br><br>
+
+    <label for="weight">New weight</label><br>
+    <input type="text" id="new_weight" name="weight" autocomplete="on"><br><br>
+
+    <button type="button" onclick="put_function()">PUT</button>
+    <br>
+    <div id="put_message"></div>
+</form>
+</body>
+</html>

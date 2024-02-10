@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <link rel="stylesheet" href="css/cssExamples.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="output" style="background-color:#fffff0;">
+            <h2>Bookings</h2>
+            <div id="ajaxContentBooking1"></div>
+        </div>
+
+        <button type="button" onclick="loadBookingData()">Load Bookings</button>
+        
+        <button type="button" onclick="showKeeperInfo()">Show Keeper Info</button>
+        <div style="margin-left:165px;">
+            <input type="number" id="keeperIdInput" placeholder="Enter Keeper ID" />
+        </div>
+        <div id="keeperInfoDisplay" style="background-color:#fffff0;"></div>
+
+        <!-- Messaging Section -->
+        <div id="messagingSection" style="display: none; margin-top:30px">
+            <h2>Send Message</h2>
+            Owner ID:<input id="ownerIdInput" readonly/><br><br>
+            <input style="height:40px; width:300px;" id="messageInput" type="text" placeholder="Write your message here"><br>
+            <button onclick="sendMessage()">Send Message</button>
+        </div>
+
+        <button type="button" onclick="saveAllBookings()">Save</button>
+        <button type="button" onclick="Go_homepage()">Back</button>
+
+        
+        <div id="chatInterface">
+            <br>
+            <button onclick="sendPredefinedQuestion('How to take care of a [dog/cat]?')">How to take care of a [dog/cat]?</button>
+            <button onclick="sendPredefinedQuestion('Give me information about the breed [dog/cat].')">Give me information about the breed [dog/cat].</button>
+            <div id="chatDisplay" style="height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
+            <input type="text" id="chatInput" placeholder="Ρώτα με κάτι για τα κατοικίδια..." size="25" style="height:36px;">
+            <button onclick="sendQuestion()">Send</button>
+        </div>
+        
+        <script src="js/ajax.js"></script>
+
+    </body>
+</html>

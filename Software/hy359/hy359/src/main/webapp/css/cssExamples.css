@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe9e9;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px; /* Adjust spacing between columns */
+}
+
+#choices,
+#output {
+    /* Styles specific to choices and output divs */
+    background-color: #ADD8E6;
+}
+
+.form {
+    margin: auto;
+    max-width: 55vw;
+    background-color: #ffffff;
+    padding: 1.5vw;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+}
+
+.form label {
+    font-family: 'Segoe UI', 'sans-serif';
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"],
+#price_cat_options,
+#price_dog_options,
+#pet,
+#country,
+#birthdate,
+#personalpage {
+    margin: auto;
+    width: 48vw;
+    padding: 10px;
+    font-size: 16px;
+    border: solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#rating {
+    margin: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button,.button {
+    background-color: #0695a2;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin: 8px 0;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #06848f;
+}
+
+button:active {
+    background-color: #45a049;
+    scale: 0.9;
+}
+
+footer {
+    background-color: #fffff0;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0; /* If we want it at the center, else we can delete it */
+    width: 100%;
+}
+
+footer table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+footer th, footer td {
+    border: 1px solid #ddd;
+    padding: 12px; 
+    text-align: left;
+}
+
+footer th {
+    background-color: #06848f;
+    color: white;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+    background-color: #f4f4f4;
+    color: #333333;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 9px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #fdfdfd;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #dddddd;
+}
+
+
+#spinWheel {
+    border: 2px solid #333; /* Gives a border to the canvas */
+    border-radius: 50%; /* Makes it circular */
+    margin: 20px auto; /* Centers the wheel */
+    display: block;
+}
